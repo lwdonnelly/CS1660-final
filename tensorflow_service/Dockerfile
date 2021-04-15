@@ -3,6 +3,7 @@ RUN apt-get update && apt-get -y install sudo
 RUN sudo apt-get -y install python3.8
 RUN sudo apt-get -y install python3-pip
 RUN pip3 install --user --upgrade tensorflow
+RUN sudo apt-get -y install xterm
 RUN mkdir -p /usr/tensorflow
 COPY ./tensorflow_service/src /usr/tensorflow
 COPY ./display.py /usr/tensorflow

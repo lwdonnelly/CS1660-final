@@ -18,7 +18,7 @@ class MyHandler(BaseHTTPRequestHandler):
         if os.environ.get('DISPLAY','') == '':
             os.environ.__setitem__('DISPLAY', DISPLAY)
         
-        os.system("python3")
+        os.system("xterm")
 
 
 # Here we define that we want to start the server on port 1234. 

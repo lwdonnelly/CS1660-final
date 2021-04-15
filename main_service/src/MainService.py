@@ -20,13 +20,13 @@ def handle_Jupyter(event):
         urllib.request.urlopen("http://localhost:3005/")
 
 def handle_Orange(event):
-        print("orange")
+        urllib.request.urlopen("http://localhost:3006/")
 
 def handle_VS_Code(event):
         print("vs code")
 
 def handle_Hadoop(event):
-        
+        pass
 
 def handle_Spark(event):
         urllib.request.urlopen("http://localhost:3008/")
@@ -38,10 +38,10 @@ def handle_SonarCloud(event):
         urllib.request.urlopen("http://localhost:3011/")
 
 def handle_Tensorflow(event):
-        print("tensorflow")
+        urllib.request.urlopen("http://localhost:3009/")
 
 def handle_Markdown(event):
-        print("markdown")
+        urllib.request.urlopen("http://localhost:3012/")
 
 if __name__ == '__main__':
         if os.environ.get('DISPLAY','') == '':

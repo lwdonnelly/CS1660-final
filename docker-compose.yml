@@ -71,6 +71,13 @@ services:
       dockerfile: ./sonarcloud_service/Dockerfile
     ports:
       - 3011:3011
+  markdown-service:
+    image: markdown
+    build: 
+      context: ./
+      dockerfile: ./markdown_service/Dockerfile
+    ports:
+      - 3012:3012
   main-service:
     build: 
       context: ./
@@ -86,4 +93,5 @@ services:
       - "orange-service"
       - "spark-service"
       - "tensorflow-service"
+      - "markdown-service"
     network_mode: host
