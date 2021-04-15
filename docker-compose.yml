@@ -1,0 +1,89 @@
+version: '3.4'
+
+services:
+  git-service:
+    image: git
+    build: 
+      context: ./
+      dockerfile: ./git_service/Dockerfile
+    ports:
+      - 3001:3001
+  rstudio-service:
+    image: rstudio
+    build: 
+      context: ./
+      dockerfile: ./rstudio_service/Dockerfile
+    ports:
+      - 3002:3002
+  spyder-service:
+    image: spyder
+    build: 
+      context: ./
+      dockerfile: ./spyder_service/Dockerfile
+    ports:
+      - 3003:3003
+  ibm_sas-service:
+    image: ibm_sas
+    build: 
+      context: ./
+      dockerfile: ./ibm_sas_service/Dockerfile
+    ports:
+      - 3004:3004
+  jupyter-service:
+    image: jupyter
+    build: 
+      context: ./
+      dockerfile: ./jupyter_service/Dockerfile
+    ports:
+      - 3005:3005
+  orange-service:
+    image: orange
+    build: 
+      context: ./
+      dockerfile: ./orange_service/Dockerfile
+    ports:
+      - 3006:3006
+  spark-service:
+    image: spark
+    build: 
+      context: ./
+      dockerfile: ./spark_service/Dockerfile
+    ports:
+      - 3008:3008
+  tensorflow-service:
+    image: tensorflow
+    build: 
+      context: ./
+      dockerfile: ./tensorflow_service/Dockerfile
+    ports:
+      - 3009:3009
+  tableau-service:
+    image: tableau
+    build: 
+      context: ./
+      dockerfile: ./tableau_service/Dockerfile
+    ports:
+      - 3010:3010
+  sonarcloud-service:
+    image: sonarcloud
+    build: 
+      context: ./
+      dockerfile: ./sonarcloud_service/Dockerfile
+    ports:
+      - 3011:3011
+  main-service:
+    build: 
+      context: ./
+      dockerfile: ./main_service/Dockerfile
+    depends_on:
+      - "git-service"
+      - "rstudio-service"
+      - "spyder-service"
+      - "ibm_sas-service"
+      - "jupyter-service"
+      - "tableau-service"
+      - "sonarcloud-service"
+      - "orange-service"
+      - "spark-service"
+      - "tensorflow-service"
+    network_mode: host
