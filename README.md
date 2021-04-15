@@ -1,5 +1,5 @@
 # CS1660-final
-On windows: 
+Instructions for windows: 
   1. run the xlaunch program 
   2. open command prompt and type the command "ipconfig" 
   3. Under "Ethernet adapter vEthernet (WSL):" copy the ipv4 address. 
