@@ -6,3 +6,5 @@ Instructions for windows:
   4. Paste the address in the display.py file so DISPLAY = "your ip address here"
   5. open a powershell window in the base directory 
   6. type the command "docker-compose up"
+
+Link to demo: https://youtu.be/K-WYOh0bZaQ
